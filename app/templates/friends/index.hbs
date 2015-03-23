@@ -1,0 +1,24 @@
+<h2>Supposed friends who are keeping me from my shit</h2>
+<h3>Total "Friends":{{model.length}}</h3>
+{{link-to 'New Friend' 'friends.new'}}
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+
+    </tr>
+  </thead>
+</table>
+<tbody>
+  {{#each friend in model}}
+    <tr>
+      <td>{{link-to friend.fullName 'friends.show' friend}} </td>
+      <td><a href="#" {{action "delete" friend }}>Delete</a></td>
+      
+    </tr>
+  {{/each}}
+</tbody>
+<ul>
+  
+</ul>
